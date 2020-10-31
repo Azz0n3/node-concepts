@@ -55,6 +55,8 @@ describe("Repositories", () => {
         techs: ["Node", "Express", "TypeScript"]
       });
 
+
+
     const response = await request(app)
       .put(`/repositories/${repository.body.id}`)
       .send({
@@ -86,7 +88,7 @@ describe("Repositories", () => {
       });
 
     await request(app)
-    .post(`/repositories/${repository.body.id}/like`);
+      .post(`/repositories/${repository.body.id}/like`);
 
     const response = await request(app)
       .put(`/repositories/${repository.body.id}`)
